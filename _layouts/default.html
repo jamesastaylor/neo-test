@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	
+	{% include head.html %}
+	
+	<body>
+		
+		{{ content }}
+        
+		<script type="text/javascript" src="{{ site.baseurl }}/js/scripts.js"></script>
+		
+		<script type="text/javascript"></script>
+			
+		<script>	
+			$(function(){
+				$('.audio-player').mediaelementplayer({
+				alwaysShowControls: true,
+				features: ['playpause','progress'],
+				audioVolume: 'horizontal',
+				audioWidth: 205,
+				audioHeight: 35,
+				iPadUseNativeControls: false,
+				iPhoneUseNativeControls: false,
+				AndroidUseNativeControls: false
+				});
+			});
+		</script>
+		
+	</body>
+
+</html>

@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{% include menu.html %}
+
+<div id="fullpage">
+
+{% assign pages = site.content | sort:"weight"  %}
+
+{% for content in pages %}
+
+	<div class="section">
+		
+		<div class="section-container">
+			
+		{{content.content}}
+		
+		</div>
+	
+	</div>
+	
+{% endfor %}
+
+</div>
+

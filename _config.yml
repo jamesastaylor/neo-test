@@ -1,0 +1,12 @@
+# Site settings
+title: Australian Taxation Office Digital Transformation
+description: Website description here
+baseurl: "/neo-experience-framework" # change this before go live
+url: "" # the base hostname & protocol for your site
+
+collections:
+  content:
+    output: true
+
+# Build settings
+markdown: kramdown

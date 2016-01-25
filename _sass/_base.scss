@@ -1,0 +1,148 @@
+// High level slide settings
+.section {
+	text-align:center;
+	background: #f1f4f5;
+	.section-container {
+		margin:0 auto;
+		padding: 0;
+	}
+	.fp-slidesNav {
+		
+	}
+}
+
+// Narrative layout elements - mobile
+.slide {
+	.image {
+		@media screen and (max-width: $small-screen) {
+			//width:120%;
+			//position:relative;
+			//overflow-x:scroll;	
+			//left:-30px;
+		}
+		p {
+			margin-right:0;
+		}
+		img {
+			width:100%;
+			height:auto;
+			@media screen and (max-width: $small-screen) {	
+				//width:180%;
+				//position:relative;
+			}
+		}
+	}
+	.fp-tableCell {
+		vertical-align: top;
+	}
+}
+
+// Content 
+.content {
+	text-align: left;
+	padding: 0 30px;
+	position:relative;
+	@media screen and (max-width: $small-screen) { 
+		padding: 0 30px;
+	}
+	h2, h3 {
+		font-size: 18px;
+		margin-top: 0;
+	}
+	.description {
+		h2 {
+			float:left;
+		}
+	}
+	.notes p {
+		font-size: 0.8em;
+	}
+}
+
+// Narrative layout elements - desktop
+@media screen and (min-width: $medium-screen) {
+	// High level slide settings
+	.section {
+		.section-container {
+			max-width:1220px;
+			margin:0 auto;
+			padding: 0 35px 50px;
+		}
+		.fp-slidesNav {
+			
+		}
+	}
+	.slide {
+		.image {
+			float: left;
+			width: 65%;
+			margin: 88px 0;
+			img {
+				max-width: 100%;
+			}
+		}
+		.text {
+			float: right;
+			width: 29%;
+			margin: 88px 0;
+			h2 {
+				margin-bottom:7px;
+			}
+			h3 {
+				margin-bottom:4px;
+				margin-top:30px;
+			}
+			p {
+				line-height:1.3;
+			}
+		}
+	}
+	// Arrows (desktop, optional)
+	.section-container .fp-controlArrow {
+		display: block;
+		border: none;
+		bottom: 14px;
+		height: inherit;
+		width: inherit;
+		bottom: 10px;
+		font-size: 26px;
+		z-index: 99;
+		margin: 0;
+		color: $light-grey;
+		&.fp-next {
+			right:15px;
+			width: inherit;
+			&:after {
+				font-family: 'FontAwesome';
+				content: "\f105";
+			}
+		}
+		&.fp-prev {
+			left: 15px;
+			width: inherit;
+			&:before {
+				font-family: 'FontAwesome';
+				content: "\f104";
+			}
+		}
+	}
+	// Controls
+	.fp-section .fp-slidesNav {
+		width: 100%;
+		&.bottom {
+			bottom: 0px;
+		}
+	}
+	// Content 
+	.content {
+		padding: 0 15px;
+		position: relative;
+	}
+}
+
+
+
+//internal scrollbar
+.slimScrollBar {
+	visibility: hidden;
+}

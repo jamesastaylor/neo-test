@@ -1,0 +1,30 @@
+<div class="menu">
+	<div class="menu-container">
+		<div id="menu">
+			
+			{% assign pages = site.content | sort:"weight"  %}
+		
+			{% for menu_item in pages %}
+			
+			<h2 class="menu-trigger" data-menuanchor="section{{ menu_item.weight }}">
+				{{ menu_item.title }}
+			</h2>
+			
+			{% endfor %}
+		
+			<ul id="menu_list">
+				
+			{% assign pages = site.content | sort:"weight"  %}
+		
+			{% for menu_item in pages %}
+				
+				<li class="menu-item" data-menuanchor="section{{ menu_item.weight }}">
+					<a href="#section{{ menu_item.weight }}">{{ menu_item.title }}</a>
+				</li>
+				
+				{% endfor %}
+			</ul>
+			
+		</div>
+	</div>	
+</div>

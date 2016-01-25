@@ -1,0 +1,38 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+//variables go here
+$ultra-grey: #333;
+$dark-grey: #2b2b2c;
+$light-grey: #bcbfc2;
+$menu-background: rgba(206,220,224,0.9);
+$blue: #3498db;
+$background: #f1f4f5;
+
+//modal icon colours
+$interaction-yellow: #fdd600;
+$facility-blue: #2579a3;
+$zone-green: #1b958f;
+
+//breakpoints
+$small-screen: 480px;
+$medium-screen: 1023px;
+$large-screen: 1220px;
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+    "base",
+    "slidenav",
+    "typography",
+    "jquery.fullPage",
+    "menu",
+    "audio-player",
+    "magnific-popup",
+    "magnific-overrides"   
+;
